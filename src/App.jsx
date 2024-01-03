@@ -1,16 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import Footer from "./components/footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="mb-4 text-3xl font-bold underline bg-green-400 text-black p-4 rounded-xl">
-        Hello world!
-      </h1>
-      <Card username="Juila"/>
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </>
   );
 }
